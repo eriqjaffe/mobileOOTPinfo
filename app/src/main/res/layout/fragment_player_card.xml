@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/headerCard"
+            android:layout_height="140dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/ballparkImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ballpark"/>
+
+            <ImageView
+                android:id="@+id/ballparkOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/playerImage"
+                android:layout_width="90dp"
+                android:layout_height="133dp"
+                android:layout_alignBottom="@+id/ballparkImage"
+                android:layout_alignLeft="@+id/ballparkImage" />
+
+            <ImageView
+                android:id="@+id/externalLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/external_link"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/playerBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:text="B:L  T:R"/>
+
+                <TextView
+                    android:id="@+id/pipe1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/playerHW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:text="6'1&quot; 225"/>
+
+                <TextView
+                    android:id="@+id/pipe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/playerAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:text="Age: 28"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+            android:id="@+id/playerTabs"
+            android:layout_below="@id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+
+        <ScrollView
+            android:id="@+id/summaryParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerTabs">
+
+            <LinearLayout
+                android:id="@+id/summaryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playerTabs"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/currentYearParent">
+
+                    <TextView
+                        android:id="@+id/currentYearLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        fontPath="fonts/OpenSans-ExtraBold.ttf"
+                        android:text="Current Year Stats" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/seasonStatHeader1"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="W-L" />
+
+                        <TextView
+                            android:id="@+id/seasonStatHeader2"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="ERA" />
+
+                        <TextView
+                            android:id="@+id/seasonStatHeader3"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="IP" />
+
+                        <TextView
+                            android:id="@+id/seasonStatHeader4"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="SO" />
+
+                        <TextView
+                            android:id="@+id/seasonStatHeader5"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="WHIP" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/seasonStat1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="17-10" />
+
+                        <TextView
+                            android:id="@+id/seasonStat2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="3.67" />
+
+                        <TextView
+                            android:id="@+id/seasonStat3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="224.1" />
+
+                        <TextView
+                            android:id="@+id/seasonStat4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="153" />
+
+                        <TextView
+                            android:id="@+id/seasonStat5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="1.26" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/careerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:text="Career Stats" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/careerStatHeader1"
+                        fontPath="fonts/OpenSans-Bold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="W-L" />
+
+                    <TextView
+                        android:id="@+id/careerStatHeader2"
+                        fontPath="fonts/OpenSans-Bold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="ERA" />
+
+                    <TextView
+                        android:id="@+id/careerStatHeader3"
+                        fontPath="fonts/OpenSans-Bold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="IP" />
+
+                    <TextView
+                        android:id="@+id/careerStatHeader4"
+                        fontPath="fonts/OpenSans-Bold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="SO" />
+
+                    <TextView
+                        android:id="@+id/careerStatHeader5"
+                        fontPath="fonts/OpenSans-Bold.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="WHIP" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/careerStat1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="17-10" />
+
+                    <TextView
+                        android:id="@+id/careerStat2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="3.67" />
+
+                    <TextView
+                        android:id="@+id/careerStat3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="224.1" />
+
+                    <TextView
+                        android:id="@+id/careerStat4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="153" />
+
+                    <TextView
+                        android:id="@+id/careerStat5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="1.26" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:text="Born: " />
+                        <TextView
+                            android:id="@+id/playerBorn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:text="Local Popularity: " />
+                        <TextView
+                            android:id="@+id/playerLocalPop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fontPath="fonts/OpenSans-Bold.ttf"
+                            android:text="National Popularity: " />
+                        <TextView
+                            android:id="@+id/playerNationalPop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/statsParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerTabs"
+            android:visibility="gone">
+            <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+                android:id="@+id/statTabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statTabs">
+                    <com.inqbarna.tablefixheaders.TableFixHeaders
+                        android:id="@+id/battingTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"/>
+                    <com.inqbarna.tablefixheaders.TableFixHeaders
+                        android:id="@+id/pitchingTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"/>
+                    <com.inqbarna.tablefixheaders.TableFixHeaders
+                        android:id="@+id/fieldingTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"/>
+            </RelativeLayout>
+            <!--<ScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!---->
+            <!--</ScrollView>-->
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/award_list_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/playerTabs"
+            android:visibility="gone"
+            android:foregroundGravity="center_vertical">
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/contractParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerTabs"
+            android:visibility="gone">
+            <include
+                layout="@layout/contract_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

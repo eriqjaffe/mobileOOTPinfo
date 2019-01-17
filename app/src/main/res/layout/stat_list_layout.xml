@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hiddenStat"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerID"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:id="@+id/logoParent">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="54dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/playerPicture"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statText"
+            fontPath="fonts/OpenSans-ExtraBold.ttf"
+            android:layout_centerInParent="true"
+            android:text=""/>
+
+    </RelativeLayout >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/logoParent"
+        android:layout_centerVertical="true"
+        android:text="Player Name"
+        android:textSize="16dp"
+        fontPath="fonts/OpenSans-Bold.ttf"
+        android:id="@+id/leaderName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Stat"
+        android:textSize="16dp"
+        fontPath="fonts/OpenSans-Bold.ttf"
+        android:id="@+id/stat"/>
+
+</RelativeLayout>

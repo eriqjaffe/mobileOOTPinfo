@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mobileootpinfo.mobileootpinfo.activity.About">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+            android:id="@+id/aboutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+
+        <ScrollView
+            android:id="@+id/aboutView"
+            android:layout_below="@id/aboutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about"/>
+        </ScrollView>
+
+        <ListView
+            android:id="@+id/faqView"
+            android:layout_below="@id/aboutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/licenseView"
+            android:layout_below="@id/aboutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

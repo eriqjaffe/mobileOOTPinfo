@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/teamCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/headerCard"
+            android:layout_height="140dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/ballparkImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ballpark"/>
+
+            <ImageView
+                android:id="@+id/ballparkOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:color/transparent"/>
+
+            <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                android:id="@+id/fallbackBaseball"
+                android:layout_centerInParent="true"
+                android:layout_alignLeft="@+id/ballparkImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                app:vector_src="@drawable/ic_baseball_2"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/teamLogo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignLeft="@+id/ballparkImage"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/parentLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/teamRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:text="W-L"/>
+
+                <TextView
+                    android:id="@+id/pipe1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/teamPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:text="2nd Place, Ault Division"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefault5TabLayout
+            android:id="@+id/teamTabs"
+            android:layout_below="@id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefault5TabLayout>
+
+        <ListView
+            android:id="@+id/roster_list_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/teamTabs"
+            android:foregroundGravity="center_vertical"/>
+
+        <ListView
+            android:id="@+id/schedule_list_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/teamTabs"
+            android:foregroundGravity="center_vertical"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/stats_list_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@id/teamTabs"
+            android:foregroundGravity="center_vertical"
+            android:visibility="gone">
+            <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+                android:id="@+id/statsTabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+            <ListView
+                android:id="@+id/teamBatting"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/statsTabs"
+                android:foregroundGravity="center_vertical"/>
+
+            <ListView
+                android:id="@+id/teamPitching"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/statsTabs"
+                android:foregroundGravity="center_vertical"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/contracts_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teamTabs"
+            android:visibility="gone"/>
+
+        <com.inqbarna.tablefixheaders.TableFixHeaders
+            android:id="@+id/teamHistoryTable"
+            android:layout_below="@id/teamTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ballpark_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@id/teamTabs"
+            android:foregroundGravity="center_vertical"
+            android:background="@color/white_smoke"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/ballparkDiagram"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ballpark_diagram"/>
+                <TextView
+                    android:id="@+id/centerField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignTop="@id/ballparkDiagram"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:id="@+id/leftLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ballparkDiagram"
+                    android:layout_marginTop="110dp"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:id="@+id/leftField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ballparkDiagram"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="55dp"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:id="@+id/leftCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ballparkDiagram"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:id="@+id/rightField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ballparkDiagram"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="55dp"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:id="@+id/rightCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ballparkDiagram"
+                    android:layout_marginRight="75dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <TextView
+                    android:id="@+id/rightLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignRight="@id/ballparkDiagram"
+                    android:layout_marginTop="110dp"
+                    android:textColor="@color/yellow"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:textSize="18dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4"/>
+                <ImageView
+                    android:id="@+id/fieldImage"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.4"
+                    android:layout_marginTop="40dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ballparkName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_margin="10dp"
+                    android:textSize="18dp"
+                    android:text="park name"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/ballparkCapacity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_margin="10dp"
+                    android:textSize="18dp"
+                    android:text="capacity"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="AVG" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="AVG (L)" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="AVG (R)" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="2B" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="3B" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="HR" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="HR (L)" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                        android:text="HR (R)" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/avg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/avgl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/avgr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/d"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/t"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/hr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/hrl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/hrr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+                </TableRow>
+            </TableLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

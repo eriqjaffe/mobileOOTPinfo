@@ -1,0 +1,98 @@
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/battingRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <TextView
+        android:id="@+id/team"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:id="@+id/year"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:id="@+id/games"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:id="@+id/atbats"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:id="@+id/runs"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:id="@+id/hits"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"/>
+    <TextView
+        android:id="@+id/doubles"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/triples"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/homeruns"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/rbi"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/steals"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/walks"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/strikeouts"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/avg"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/obp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/slg"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/ops"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+    <TextView
+        android:id="@+id/war"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp" />
+</TableRow>

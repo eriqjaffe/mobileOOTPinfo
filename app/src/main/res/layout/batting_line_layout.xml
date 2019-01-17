@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/family_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/playerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        fontPath="fonts/OpenSansCondensed-Bold.ttf"
+        android:text="Joe Blow, SS" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:id="@+id/atBats"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="AB"/>
+        <TextView
+            android:id="@+id/runs"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="R"/>
+        <TextView
+            android:id="@+id/hits"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="H"/>
+        <TextView
+            android:id="@+id/rbi"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="RBI"/>
+        <TextView
+            android:id="@+id/walks"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="BB"/>
+        <TextView
+            android:id="@+id/strikeouts"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="SO"/>
+        <TextView
+            android:id="@+id/avg"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            fontPath="fonts/OpenSansCondensed-Bold.ttf"
+            android:text="AVG" />
+    </LinearLayout>
+
+</RelativeLayout>

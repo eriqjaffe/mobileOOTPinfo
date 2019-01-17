@@ -1,0 +1,121 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:id="@+id/logoParent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseball"
+            android:layout_centerInParent="true"
+            android:id="@+id/statLogo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statText"
+            fontPath="fonts/OpenSans-ExtraBold.ttf"
+            android:layout_centerInParent="true"
+            android:text=""/>
+
+    </RelativeLayout >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/logoParent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/subLeague0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:id="@+id/leaderNameSL0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:id="@+id/statSL0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hiddenStatSL0"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerIDSL0"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <View
+            android:id ="@+id/divider"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            style="@style/Divider" />
+
+        <RelativeLayout
+            android:id="@+id/subLeague1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Player Name"
+                android:textSize="16dp"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:id="@+id/leaderNameSL1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Stat"
+                android:textSize="16dp"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:id="@+id/statSL1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hiddenStatSL1"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerIDSL1"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

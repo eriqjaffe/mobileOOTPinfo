@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">OOTP Mobile Companion</string>
+    <string name="title_activity_manage_leagues">ManageLeagues</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_standings">Standings</string>
+    <string name="title_activity_player_card">Player Card</string>
+    <string name="title_activity_nav_drawer">OOTP Mobile Companion</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="pitching">Pitching</string>
+    <string name="batting">Batting</string>
+    <string name="fielding">Fielding</string>
+
+    <string name="invalid_html_path">The HTML path is invalid</string>
+    <string name="no_leagues_in_csv">No leagues found in the remote CSV file</string>
+    <string name="error_adding_universe">An error occurred adding your universe to the database!</string>
+    <string name="invalid_csv_path">The CSV path is invalid</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="pref_title_download_pref">Download preference</string>
+    <string name="batting_leaders">Batting Leaders</string>
+
+    <string name="no_universes_defined">There are no universes defined</string>
+    <string name="add_a_universe_to_get_started">Please add a universe to get started!</string>
+    <string name="force_refresh_question">The database appears to be up-to-date, would you like to force a refresh anyway?</string>
+    <string name="something_went_wrong">Something went wrong:</string>
+    <string name="something_went_wrong_but">Something went wrong, but I don\'t know what</string>
+    <string name="file_x_of_y">File %d of %d</string>
+    <string name="row_x_of_y">Row %d of %d</string>
+    <string name="no_internet">You don\'t seem to be connected to the internet</string>
+    <string name="no_wifi_warning">You\'re not connected to wifi, are you sure?</string>
+    <string name="no_wifi_block">You are not connected to wifi</string>
+    <string name="something_not_set">Something\'s not set?</string>
+    <string name="active_managers">Active Managers</string>
+    <string name="retired_managers">Retired Managers</string>
+    <string name="_league_info">League Info</string>
+    <string name="_leagues">Leagues</string>
+    <string name="_championships">Championships</string>
+    <string name="news_html_league_logos">news/html/images/league_logos/%s</string>
+    <string name="player_link">news/html/players/player_%d.html</string>
+    <string name="player_image">news/html/images/person_pictures/player_%d.png</string>
+    <string name="news_article">news/html/leagues/league_%d_news_%d.html</string>
+    <string name="team_logo">news/html/images/team_logos/%s</string>
+    <string name="index_html">news/html/index.html</string>
+    <string-array name="pref_download_list_titles">
+        <item>Either WiFi or Mobile Data</item>
+        <item>Prefer WiFi</item>
+        <item>Only WiFi</item>
+    </string-array>
+    <string-array name="pref_download_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="about">I have been playing Out of the Park Baseball since 2004, but have always wished that there was a better mobile interface for the reports.\n\nAfter toying around with mobile browser detection, I ultimately decided on creating a dedicated app.  In my opinion it provides a better user interface, as well as gives a bit of flexibility for offline use.  It also provided me with a bit of experience learning some Android programming.\n\n</string>
+    <string name="delete_universe_error">An error occurred deleting the Universe</string>
+    <string name="csv_empty_error">CSV field cannot be empty</string>
+    <string name="csv_path_invalid">CSV path is invalid</string>
+    <string name="universe_name">Universe Name:</string>
+    <string name="universe_csv">Universe CSV:</string>
+    <string name="universe_html_optional">Universe HTML (Optional):</string>
+    <string name="make_this_the_default_universe">Make this the default universe?</string>
+    <string name="default_league">Default League:</string>
+    <string name="csv_path_required">You must provide a CSV path</string>
+    <string name="universe_must_have_name">The universe must have a name</string>
+    <string name="get_news_pref_string">Get news on universe load</string>
+    <string name="fetch_news_article_qty">Maximum number of news articles to fetch</string>
+    <string name="checking_for_news">Checking for %s news...</string>
+    <string name="pitching_leaders">Pitching Leaders</string>
+    <string name="roster">Roster</string>
+    <string name="schedule">Schedule</string>
+    <string name="stats">Stats</string>
+    <string name="contracts">Contracts</string>
+    <string name="history">History</string>
+    <string name="ballpark">Ballpark</string>
+    <string name="pitchers">Pitchers</string>
+    <string name="catchers">Catchers</string>
+    <string name="infielders">Infielders</string>
+    <string name="outfielders">Outfielders</string>
+    <string name="designated_hitters">Designated Hitters</string>
+    <string-array name="faq_questions">
+        <item>So how does this thing work?</item>
+        <item>How do I find out the CSV and HTML paths?</item>
+        <item>Why can\'t I put spaces in the universe name?</item>
+        <item>Some of the views come up blank when I\'m pretty sure they shouldn\'t, what\'s happening?</item>
+        <item>Why are some things missing from the box scores?</item>
+        <item>Why isn\'t there an iPhone version of this?</item>
+    </string-array>
+    <string-array name="faq_answers">
+        <item>Simply provide a name for your universe (really, it could be anything distinctive) and the paths to the universe\'s CSV and HTML files.
+            When the universe is intiailized, the necessary CSV files are downloaded and parsed into an internal database.  That database is what all of the
+            views are populated from.</item>
+        <item>Generally speaking, the CSV is located in a \"csv\" folder directly off of the league\'s root URL (http://www.yourleague.com/csv/).\n\nThe URL
+            path is usually the main reports directory for your league.  So, for example, if the main index file for your league is
+            http://www.yourleague.com/reports/news/html/index.html, then the root path this app needs is http://www.yourleague.com/reports/.\n\nThat being said,
+            it\'s best to check with the commissioner of your league to get the appropraite paths.\n\nThe HTML path is optional, but recommended for the best
+            experience.</item>
+        <item>Universe names need to be restricted to alphanumeric strings without spaces because the tables are created based on the CSV files.
+            I prepend the universe name to the tables (universe_players, and so forth) to essentially serve as a key to keep the universes separated.</item>
+        <item>Blank views are usually the result of queries that have returned no data because the tables never got populated correctly because
+            of errors downloading the CSV files.  The app <i>should</i> notify you if a download error has occurred, but simply refreshing the universe
+            will take care of it the vast majority of the time.</item>
+        <item>If possible, the box score from your league\'s web server is used as the source for the box score data.  However, if the box score cannot be found for any reason, I
+            generate a box score from the CSV files as a fallback.  Unfortunately, there are limitations due to what is stored in the CSV.\n\nFor example, pinch hitters
+            and pinch runners are not distinguished, so I have to guess based on plate appearances - if a pinch-runner stays in the game and gets a plate appearance later on, I have not
+            figured out a way of determining that.\n\nSimilarly, defensive subs that don\'t get a plate appearance are not referenced, and there
+            is no per-game fielding information stored in the CSV.\n\nRelief pitchers may appear out of order, as the actual order of appearance is not stored.
+            I can figure out what innings they appeared in which is right a lot of the time, but if multiple pitchers are used in an inning I haven\'t
+            figured out how to determine proper order.\n\nMinor leauge box scores are even worse, as the fields that determine batting order and pitching innigs
+            are not populated for minor league games so the batters and any relievers are listed in order of their OOTP player ID.</item>
+        <item>I don\'t have a Mac or an iPhone, that\'s why.  ;)</item>
+    </string-array>
+</resources>

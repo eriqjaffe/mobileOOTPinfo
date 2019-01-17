@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+            android:id="@+id/leagueTabs"
+            android:layout_below="@id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+
+        <RelativeLayout
+            android:id="@+id/ownersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leagueTabs"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <ListView
+                android:id="@+id/managersListView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/championsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leagueTabs"
+            android:visibility="gone">
+            <ListView
+                android:id="@+id/championsListView"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/awardsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leagueTabs"
+            android:visibility="gone">
+            <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+                android:id="@+id/awardTabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+            <ListView
+                android:layout_below="@id/awardTabs"
+                android:id="@+id/mvpListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ListView
+                android:layout_below="@id/awardTabs"
+                android:id="@+id/cyaListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <ListView
+                android:layout_below="@id/awardTabs"
+                android:id="@+id/royListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ballparkLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leagueTabs"
+            android:visibility="gone">
+            <RelativeLayout
+                android:id="@+id/dateNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageButton
+                    android:id="@+id/yearBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/displayedYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    fontPath="fonts/OpenSans-Bold.ttf"
+                    android:text="DATE HERE" />
+
+                <ImageButton
+                    android:id="@+id/yearForward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_arrow_forward_black_24dp" />
+            </RelativeLayout>
+
+            <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+                android:id="@+id/leaderTabs"
+                android:layout_below="@id/dateNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+
+            <ListView
+                android:id="@+id/batting_leaderboard_view"
+                android:layout_below="@id/leaderTabs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:foregroundGravity="center_vertical">
+            </ListView>
+
+            <ListView
+                android:id="@+id/pitching_leaderboard_view"
+                android:layout_below="@id/leaderTabs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:foregroundGravity="center_vertical"
+                android:visibility="gone">
+            </ListView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

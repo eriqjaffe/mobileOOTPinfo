@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scoreboard_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FEFEFE"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        card_view:cardMaxElevation="4dp"
+        card_view:cardElevation="4dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/gameTypeWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/gameType"
+                    fontPath="fonts/OpenSans-Bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp" />
+
+                <View style="@style/Divider"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/awayLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_baseball" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/awayLogo">
+
+                    <TextView
+                        android:id="@+id/awayTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Away Team"
+                        fontPath="fonts/OpenSans-Bold.ttf"/>
+
+                    <TextView
+                        android:id="@+id/awayTeamRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(W-L)"
+                        android:layout_toEndOf="@id/awayLogo" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/gameTime"
+                    fontPath="fonts/OpenSans-ExtraBold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="7:10pm" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/homeLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_baseball" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/homeLogo">
+
+                    <TextView
+                        android:id="@+id/homeTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="home Team"
+                        fontPath="fonts/OpenSans-Bold.ttf"/>
+
+                    <TextView
+                        android:id="@+id/homeTeamRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(W-L)"
+                        android:layout_toEndOf="@id/homeLogo" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View style="@style/Divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+                <TextView
+                    android:id="@+id/awayAbbr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    fontPath="fonts/OpenSansCondensed-Light.ttf"
+                    android:text="ABR:"/>
+                <TextView
+                    android:id="@+id/awayPitcher"
+                    android:layout_toRightOf="@id/awayAbbr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:text="Away SP"/>
+                <TextView
+                    android:id="@+id/awayPitcherStatLine"
+                    android:layout_toRightOf="@id/awayPitcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    fontPath="fonts/OpenSansCondensed-Light.ttf"
+                    android:text="(1-1. 3.40)"/>
+                <TextView
+                    android:id="@+id/homeAbbr"
+                    android:layout_toRightOf="@id/awayPitcherStatLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    fontPath="fonts/OpenSansCondensed-Light.ttf"
+                    android:text="HBR:"/>
+                <TextView
+                    android:id="@+id/homePitcher"
+                    android:layout_toRightOf="@id/homeAbbr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:text="Home SP"/>
+                <TextView
+                    android:id="@+id/homePitcherStatLine"
+                    android:layout_toRightOf="@id/homePitcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    fontPath="fonts/OpenSansCondensed-Light.ttf"
+                    android:text="(1-1. 3.40)"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

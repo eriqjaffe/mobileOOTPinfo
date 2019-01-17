@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/headerCard"
+            android:layout_height="140dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/officeImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/office"/>
+
+            <ImageView
+                android:id="@+id/officeOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/ownerImage"
+                android:layout_width="90dp"
+                android:layout_height="133dp"
+                android:layout_alignBottom="@+id/officeImage"
+                android:layout_alignLeft="@+id/officeImage"
+                android:src="@drawable/executive"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="27 Years"/>
+
+                <TextView
+                    android:id="@+id/pipe1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/white"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/wonLoss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="1530-1530"/>
+
+                <TextView
+                    android:id="@+id/pipe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/white"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/winningPct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text=".503"/>
+
+                <TextView
+                    android:id="@+id/pipe3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/white"
+                    android:text="|"/>
+
+                <TextView
+                    android:id="@+id/championships"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:text="Titles: 3"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.inqbarna.tablefixheaders.TableFixHeaders
+            android:layout_margin="10dp"
+            android:id="@+id/managerStatTable"
+            android:layout_below="@id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

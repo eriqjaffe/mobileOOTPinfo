@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/leagueMenu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_leagues"
+            android:icon="@drawable/shield"
+            android:title="Leagues" />
+        <item
+            android:id="@+id/nav_teams"
+            android:icon="@drawable/team"
+            android:title="Teams" />
+        <item
+            android:id="@+id/nav_players"
+            android:icon="@drawable/ic_player"
+            android:title="Players" />
+        <item
+            android:id="@+id/nav_batting_leaders"
+            android:icon="@drawable/batter2"
+            android:title="Batting Leaders" />
+        <item
+            android:id="@+id/nav_pitching_leaders"
+            android:icon="@drawable/pitcher"
+            android:title="Pitching Leaders" />
+        <item
+            android:id="@+id/nav_standings"
+            android:icon="@drawable/standings"
+            android:title="Standings" />
+        <item
+            android:id="@+id/nav_scores"
+            android:icon="@drawable/scores"
+            android:title="Scores" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/book"
+            android:title="League Info" />
+    </group>
+
+    <group
+        android:id="@+id/adminMenu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_switch"
+            android:icon="@drawable/ic_swap_vert_black_24dp"
+            android:title="Manage Universes" />
+        <item
+            android:id="@+id/nav_refresh"
+            android:icon="@drawable/ic_refresh_black_24dp"
+            android:title="Refresh Current Universe" />
+    </group>
+
+</menu>

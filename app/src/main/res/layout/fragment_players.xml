@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout
+        android:id="@+id/playerTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.mobileootpinfo.mobileootpinfo.util.CalligraphyDefaultTabLayout>
+
+    <LinearLayout
+        android:id="@+id/activeParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerTabLayout"
+        android:orientation="vertical">
+
+        <EditText android:id="@+id/inputSearch"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:hint="Search players..."
+            android:textSize="14dp"
+
+            android:inputType="textVisiblePassword"/>
+
+        <ListView
+            android:id="@+id/player_list_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:foregroundGravity="center_vertical">
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/retiredParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerTabLayout"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText android:id="@+id/retiredInputSearch"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:hint="Search players..."
+            android:textSize="14dp"
+
+            android:inputType="textVisiblePassword"/>
+
+        <ListView
+            android:id="@+id/retired_player_list_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:foregroundGravity="center_vertical">
+        </ListView>
+    </LinearLayout>
+
+
+</RelativeLayout>

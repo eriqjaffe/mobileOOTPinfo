@@ -1,0 +1,105 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/championYear"
+        fontPath="fonts/OpenSans-ExtraBold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/awayGame"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="10dp"
+        android:text="YEAR" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/teamLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/teamLogo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/championName"
+                fontPath="fonts/OpenSans-ExtraBold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="18dp"
+                android:text="CHAMPION NAME" />
+
+            <TextView
+                android:id="@+id/managerName"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Manager Name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="6"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:id="@+id/record"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"/>
+                <TextView
+                    android:id="@+id/avg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal" />
+                <TextView
+                    android:id="@+id/hr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal" />
+                <TextView
+                    android:id="@+id/sb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal" />
+                <TextView
+                    android:id="@+id/era"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal" />
+                <TextView
+                    android:id="@+id/k"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    fontPath="fonts/OpenSansCondensed-Bold.ttf"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
