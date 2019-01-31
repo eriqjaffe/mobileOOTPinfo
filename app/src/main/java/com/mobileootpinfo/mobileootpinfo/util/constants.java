@@ -12,7 +12,7 @@ public final class constants {
     public static final String[] throwing = {"","R","L"};
     public static final String[] popularity ={"Unknown","Insignificant","Fair","Well Known","Popular","Very Popular","Extremely Popular","Disliked"};
     public static final String[] league_level ={"","Major League","Triple A","Double A","Single A","Short Season A","Rookie League",
-            "Independent League","International League","College","High School"};
+            "Independent League","International League","","College","High School"};
     public static final String[] game_types = {"Regular Season", "Exhibition", "Spring Training", "Playoffs", "All-Star Game"};
     public static final String[] short_game_types = {"Regular", "Exhibition", "Spring", "Playoff", "All-Star"};
     public static final LinkedHashMap<String, Integer> battingLeaderStats;

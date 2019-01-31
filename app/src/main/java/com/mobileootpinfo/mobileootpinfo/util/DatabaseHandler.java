@@ -118,7 +118,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         statsStripZero.put("slg",true);
         statsRoundTo.put("slg",3);
 
-        formulas.put("ops","(((a.h * 1.0) + a.bb + a.hp) / (a.ab + a.bb + a.hp + a.sf)) + ((((a.h*1.0)-a.d-a.t-a.hr)+(a.d*2)+(a.t*3)+(a.hr*4))/a.ab)");
+        formulas.put("ops","((((a.h * 1.0) + a.bb + a.hp) / (a.ab + a.bb + a.hp + a.sf)) + ((((a.h*1.0)-a.d-a.t-a.hr)+(a.d*2)+(a.t*3)+(a.hr*4))/a.ab))");
         statsDisplay.put("ops","OPS");
         statsSort.put("ops","desc");
         statsQualifier.put("ops","(a.pa * 1.0 / b.g) >= 3.1");
@@ -2299,7 +2299,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     rERA = rERA.setScale(2, RoundingMode.HALF_UP);
                     summary.setEra(rERA);
 
-                    Float whip = (cursor.getFloat(4) + cursor.getFloat(3)) *9 / (cursor.getFloat(2)/3);
+                    //Float whip = (cursor.getFloat(4) + cursor.getFloat(3)) *9 / (cursor.getFloat(2)/3);
+                    Float whip = (cursor.getFloat(4) + cursor.getFloat(3)) / (cursor.getFloat(2)/3);
                     BigDecimal rWHIP = new BigDecimal(Float.toString(whip));
                     rWHIP = rWHIP.setScale(2, RoundingMode.HALF_UP);
                     summary.setWhip(rWHIP);
@@ -2345,7 +2346,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     rERA = rERA.setScale(2, RoundingMode.HALF_UP);
                     summary.setEra(rERA);
 
-                    Float whip = (cursor.getFloat(4) + cursor.getFloat(3)) *9 / (cursor.getFloat(2)/3);
+                    //Float whip = (cursor.getFloat(4) + cursor.getFloat(3)) *9 / (cursor.getFloat(2)/3);
+                    Float whip = (cursor.getFloat(4) + cursor.getFloat(3)) / (cursor.getFloat(2)/3);
                     BigDecimal rWHIP = new BigDecimal(Float.toString(whip));
                     rWHIP = rWHIP.setScale(2, RoundingMode.HALF_UP);
                     summary.setWhip(rWHIP);
@@ -2595,7 +2597,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 do {
                     PitchingStatLine line = new PitchingStatLine();
                     Float ip = cursor.getFloat(9) / 3;
-                    Float er = cursor.getFloat(12);
+                    Float er = cursor.getFloat(13);
                     Float walks = cursor.getFloat(14);
                     Float hits = cursor.getFloat(10);
 
@@ -2612,7 +2614,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
                     BigDecimal whip;
                     try {
-                        whip = new BigDecimal(Float.toString(((walks+hits)*9)/ip));
+                        whip = new BigDecimal(Float.toString((walks+hits)/ip));
                     } catch (NumberFormatException e) {
                         whip = new BigDecimal(Float.toString(0));
                     }
